@@ -16,12 +16,13 @@
   //----------Sincronizar objetos en Tiempo Real-------------------
   //Obtener elementos
   var preObject =document.getElementById('historico');
+  var myJSON;
   //Crear referencias
 const dbRefObject = firebase.database().ref().child('Historico');
 //Sincronizar cambios objetos
 /* dbRefObject.on('value', snap => console.log (snap.val()));//esto muestra en consola el objeto*/
  dbRefObject.on('value', snap => {
-  preObject.innerText =JSON.stringify(snap.val(),null,3);
+preObject.innerText = JSON.stringify(snap.val(),null,3);
 }) ;
-
+//preObject.innerText = myJSON;
 }());
