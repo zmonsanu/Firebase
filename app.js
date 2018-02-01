@@ -16,13 +16,30 @@
   //----------Sincronizar objetos en Tiempo Real-------------------
   //Obtener elementos
   var preObject =document.getElementById('historico');
-  var myJSON;
+  var ulListProxRev =document.getElementById('proxRev');
+  var ulListAntRev =document.getElementById('antRev');
+
   //Crear referencias
 const dbRefObject = firebase.database().ref().child('Historico');
+const dbRefProxRev = dbRefObject.child('ProximaRevision');
+const dbRefAntRev = dbRefObject.child('AnteriorRevision');
 //Sincronizar cambios objetos
 /* dbRefObject.on('value', snap => console.log (snap.val()));//esto muestra en consola el objeto*/
  dbRefObject.on('value', snap => {
 preObject.innerText = JSON.stringify(snap.val(),null,3);
 }) ;
-//preObject.innerText = myJSON;
+//Sincronizar cambios en la lista de AntiorRevision
+dbRefAntRev.on('child_added', snap =>{
+const li1 = document.createElement('li');
+li1.innerText = snap.val();
+ulListAntRev.appendChild(li1);
+});
+
+//Sincronizar cambios en la lista de ProximaRevision
+dbRefProxRev.on('child_added', snap =>{
+const li = document.createElement('li');
+li.innerText = snap.val();
+ulListProxRev.appendChild(li);
+});
+
 }());
