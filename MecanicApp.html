@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MecanicApp 1</title>
+      <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+  </head>
+  <body>
+
+        <h1 id="vehiculo"></h1>
+
+<script>
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyDBDav_7PBwRbE0QTCTidMDZL4bMe87Gqs",
+  authDomain: "mecanicapp-9caec.firebaseapp.com",
+  databaseURL: "https://mecanicapp-9caec.firebaseio.com",
+  projectId: "mecanicapp-9caec",
+  storageBucket: "mecanicapp-9caec.appspot.com",
+  messagingSenderId: "723241712931"
+};
+firebase.initializeApp(config);
+
+      //---- Muestra en una etiqueta H1 el registro que se meta en la base de datos
+      var vehiculo = document.getElementById('vehiculo');
+      var dbRef = firebase.database().ref().child('Vehiculo');
+      dbRef.on('value', snap => vehiculo.innerText = snap.val());
+</script>
+
+
+
+
+
+
+  </body>
+</html>
