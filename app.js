@@ -31,6 +31,7 @@ preObject.innerText = JSON.stringify(snap.val(),null,3);
 //Sincronizar cambios en la lista de AntiorRevision
 dbRefAntRev.on('child_added', snap =>{
 const li1 = document.createElement('li');
+li1.className = "list-group-item";
 li1.innerText = snap.val();
 ulListAntRev.appendChild(li1);
 });
@@ -38,6 +39,7 @@ ulListAntRev.appendChild(li1);
 //Sincronizar cambios en la lista de ProximaRevision
 dbRefProxRev.on('child_added', snap =>{
 const li = document.createElement('li');
+li.className = "list-group-item";
 li.innerText = snap.val();
 ulListProxRev.appendChild(li);
 });
