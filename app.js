@@ -32,7 +32,8 @@ preObject.innerText = JSON.stringify(snap.val(),null,3);
 dbRefAntRev.on('child_added', snap =>{
 const li1 = document.createElement('li');
 li1.className = "list-group-item";
-li1.innerText = snap.val();
+li1.innerText = snap.key + ': ' + snap.val();
+li1.id = snap.key;
 ulListAntRev.appendChild(li1);
 });
 
@@ -40,7 +41,8 @@ ulListAntRev.appendChild(li1);
 dbRefProxRev.on('child_added', snap =>{
 const li = document.createElement('li');
 li.className = "list-group-item";
-li.innerText = snap.val();
+li.innerText = snap.key + ': ' + snap.val();
+li.id = snap.key;
 ulListProxRev.appendChild(li);
 });
 
