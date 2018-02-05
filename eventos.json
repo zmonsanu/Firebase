@@ -1,0 +1,27 @@
+{{
+"Id":1,
+"Fecha":"5/2/2018",
+"Vehiculo":"Volksgawen Golf IV",
+"Taller":"Inyeauto",
+"Kilometros":250000,
+"Descripcion":"Cambio Aceite y filtros",
+"ProximaRevison":{"FechaAprox":"5/5/2018","KilometrosAprox":275000,"Descripcion":"Cambio aceite"}
+},
+{
+"Id":2,
+"Fecha":"1/2/2018",
+"Vehiculo":"Harley Davidson",
+"Taller":"RCP",
+"Kilometros":99000,
+"Descripcion":"Cambio ruedas y pastillas de frenos",
+"ProximaRevison":{"FechaAprox":"1/6/2018","KilometrosAprox":275000,"Descripcion":"Revisión general."}
+},
+{
+"Id":3,
+"Fecha":"3/2/2018",
+"Vehiculo":"BMW",
+"Taller":"Centro BWM",
+"Kilometros":35000,
+"Descripcion":"Cambio ruedas y pastillas de frenos",
+"ProximaRevison":{"FechaAprox":"3/7/2018","KilometrosAprox":40000,"Descripcion":"Revisión general."}
+}}
