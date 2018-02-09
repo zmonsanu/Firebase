@@ -12,10 +12,21 @@
   firebase.initializeApp(config);
 
 
+//AUTENTIFICACION:
+//Devuelve los metodos de autentificación de firebase
+const auth =firebase.auth();
+//Se va a trabajar con autentificación de email y password
+const email="zmonsanu@gmail.com";
+const pass="b77a5c561934e089"
+auth.createUserWithEmailAndPassword(email,pass);
+auth.signInWithEmailAndPassword(email,pass);//logea un usuario ya existente
+
+auth.onAuthStateChanged(firebaseUser =>{});//CUando el usuario se logea
 
   //----------Sincronizar objetos en Tiempo Real-------------------
   //Obtener elementos
-  var preObject =document.getElementById('historico');
+  var strJSON ;
+  var preObject =document.getElementById('hist');
   var ulListProxRev =document.getElementById('proxRev');
   var br = document.createElement("br");
   //var ulListReg2 =document.getElementById('reg2');
@@ -40,13 +51,18 @@
   div2.className="card-header";
   //Crear referencias
 const dbRefObject = firebase.database().ref();
-const dbRefHistorico = dbRefObject.child('Historico');
+//const dbRefHistorico = dbRefObject.child('Historico');
 
 //Sincronizar cambios objetos
 /* dbRefObject.on('value', snap => console.log (snap.val()));//esto muestra en consola el objeto*/
  dbRefHistorico.on('value', snap => {
-preObject.innerText = JSON.stringify(snap.val(),null,3);
+   strJSON=JSON.stringify(snap.val(),null,3);
+$('#table').bootstrapTable({
+     data: strJSON
+});
 }) ;
+
+
 
 //Sincronizar cambios en la lista de AnteriorRevision
 div.innerText="Registro Nº 2";
@@ -61,12 +77,12 @@ if( snap.key !="ProximaRevison"){
   ulListReg2.appendChild(li1);
 }
 card.appendChild(ulListReg2);
-card.appendChild(br);
+
 });
 document.getElementById("bloqueListas").appendChild(card);
 document.getElementById("bloqueListas").appendChild(br);
 
-
+// child_added y child_changed detectan cualquier cambio en la bbdd
 div2.innerText="Próxima Revisión del Registro Nº 1";
   card2.appendChild(div2);
 const dbRefProxRev = dbRefHistorico.child('1/ProximaRevison');
@@ -78,9 +94,9 @@ dbRefProxRev.on('child_added', snap =>{
   ulListReg1.appendChild(li);
 
   card2.appendChild(ulListReg1);
-  card2.appendChild(br);
+
 });
-document.getElementById("bloqueListas").appendChild(card2);
+document.getElementById("bloqueListas2").appendChild(card2);
 
 //Sincronizar cambios en la lista de AnteriorRevision
 /* const dbRefProxRev = dbRefHistorico.child('1');

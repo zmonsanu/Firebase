@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login Firebase</title>
+      <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse bg-faded">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+ </button>
+ <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item">
+        <a class="nav-link" href="About.html">Acerca</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+
+  <div class="container-fluid">
+
+    <div class="container">
+      <div class="card card-container">
+          <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+          <img id="profile-img" class="profile-img-card" src="assets/img/avatar.png" />
+          <p id="profile-name" class="profile-name-card"></p>
+          <form class="form-signin">
+              <span id="reauth-email" class="reauth-email"></span>
+              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+              <div id="remember" class="checkbox">
+                  <label>
+                      <input type="checkbox" value="remember-me"> Recordar
+                  </label>
+              </div>
+              <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Log in</button>
+          </form><!-- /form -->
+          <a href="#" class="forgot-password">
+            Registrarse
+          </a>
+      </div><!-- /card-container -->
+  </div><!-- /container -->
+
+</div>
+
+<br>
+
+<br>
+<!-- Importante poner la etiqueta pre con el id antes del script app.js -->
+<script src="js/app.js"></script>
+
+
+
+
+</body>
+</html>

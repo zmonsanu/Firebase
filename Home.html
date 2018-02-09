@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="full-height">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Firebase - MecanicApp</title>
+      <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+      <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="css/compiled.min.css" rel="stylesheet">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+
+</head>
+
+     <style>
+/* GAMA DE COLORES: https://mdbootstrap.com/css/colors/ */
+
+     .view {
+     background: url("assets/img/912.png")no-repeat center center;
+     background-size: cover;
+ }
+
+ @media (min-width: 768px) {
+     .view {
+         overflow: visible;
+         margin-top: -56px;
+     }
+ }
+ .navbar {
+     z-index: 1;
+
+ }
+
+
+         </style>
+
+  </head>
+  <body>
+    <!--Main Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark black">
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong>Firebase</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">Acerca</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+  <!--Main Navigation-->
+
+  <br>
+
+
+
+    <!--Section: Features v.2-->
+    <section class="feature-box">
+
+    <!--Section heading-->
+    <h1 class="py-5 font-bold">Firebase</h1>
+    <!--Section description-->
+    <p class="px-5 mb-5 pb-3 lead grey-text">Contenido de la base de datos (JSON).</p>
+
+    <div class="container">
+           <!-- <pre id="hist"></pre> -->
+          <div id="tablaJSON"></div>
+        </div>
+<br>
+<br>
+  <p class="lead"> Pero también puedo recuperar los hijos (child) de ese registro JSON</p>
+    <div class="mx-auto" style="width: 200px;"> <!-- Para centrar las listas -->
+
+
+      </div>
+      <hr>
+      <br>
+
+    <!--Grid row-->
+    <div class="row features-small">
+
+    <!--Grid column-->
+    <div class="col-md-4 mb-r">
+    <div class="col-1 col-md-2 float-left">
+    <i class="fa fa-bullhorn blue-text"></i>
+    </div>
+    <div class="col-10 col-md-9 col-lg-10 float-right"  id="bloqueListas">
+    <!-- <h4 class="font-bold">Marketing</h4>
+    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda.</p>
+    <a class="btn btn-primary btn-sm ml-0">Learn more</a> -->
+    </div>
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-md-4 mb-r">
+    <div class="col-1 col-md-2 float-left">
+    <i class="fa fa-cogs pink-text"></i>
+    </div>
+    <div class="col-10 col-md-9 col-lg-10 float-right"  id="bloqueListas2">
+    <!--  <h4 class="font-bold">Customization</h4>
+    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda.</p>
+    <a class="btn btn-pink btn-sm ml-0">Learn more</a> -->
+    </div>
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column
+    <div class="col-md-4 mb-r">
+    <div class="col-1 col-md-2 float-left">
+    <i class="fa fa-dashboard purple-text"></i>
+    </div>
+    <div class="col-10 col-md-9 col-lg-10 float-right">
+    <h4 class="font-bold">Support</h4>
+    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda.</p>
+    <a class="btn btn-secondary btn-sm ml-0">Learn more</a>
+    </div>
+    </div>-->
+    <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+    </section>
+    <!--Section: Features v.2-->
+
+    <br>
+
+    <!-- Importante poner la etiqueta pre con el id antes del script app.js -->
+    <script src="js/app.js"></script>
+
+  </body>
+  </html>
